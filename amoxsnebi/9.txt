@@ -1,0 +1,12 @@
+void print_rec(nod* temp = head){
+    if(temp == NULL){
+        cout << "\n";
+        return;
+    }
+    cout << temp->data << " ";
+    print_rec(temp->next);
+}
+
+//main
+
+print_rec();

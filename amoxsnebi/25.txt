@@ -1,0 +1,9 @@
+void putThird(int data){
+    if (head == nullptr || head->next == nullptr) {
+        return;
+    }
+    nod* temp = head->next; 
+    nod* it = new nod(data);
+    it->next = temp->next;
+    temp->next = it;
+}

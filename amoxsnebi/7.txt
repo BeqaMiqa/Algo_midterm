@@ -1,0 +1,17 @@
+int findRec(int data, int pos = 0, nod* temp = head){
+    if(temp == NULL)return -1;
+    if(temp -> data == data)return pos;
+    return findRec(data, pos + 1, temp -> next);
+    
+}
+
+
+//magalitad
+// 1 2 3 4 5
+// 0 1 2 3 4 pozicia
+
+// main
+
+cout << findRec(3); // magalitad 3
+
+ // gamoitans 2 s

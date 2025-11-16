@@ -1,0 +1,18 @@
+struct nod{
+  int data;
+  nod* next;
+  
+  nod(int data){
+      this -> data = data;
+      this -> next = NULL;
+  }
+  
+};
+
+nod* top;
+
+void push(int data){
+    nod* temp = new nod(data);
+    temp -> next = top;
+    top = temp;
+}

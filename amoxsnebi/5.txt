@@ -1,0 +1,8 @@
+int sumRec(nod* temp = head, int sum = 0){
+    if(temp == NULL)return sum;
+    sum += temp -> data;
+    return sumRec(temp -> next, sum);
+}
+
+//meinshi
+cout << sumRec();

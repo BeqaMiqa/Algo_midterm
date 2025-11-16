@@ -1,0 +1,14 @@
+int sumNorm(){
+    int sum = 0;
+    nod* temp = head;
+    while(temp != NULL){
+        sum += temp -> data;
+        temp = temp -> next;
+    }
+    
+    return sum;
+}
+
+// isev meinshi
+
+cout << sumNorm();

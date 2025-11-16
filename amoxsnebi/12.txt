@@ -1,0 +1,11 @@
+void revItPnt(){
+    nod* temp = tail;
+    while(temp != NULL){
+        cout << temp -> data << " ";
+        temp = temp -> prev;
+    }
+}
+
+// main
+
+revItPnt();

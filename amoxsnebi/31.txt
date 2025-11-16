@@ -1,0 +1,63 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+priority_queue<int> pq;
+
+struct nod {
+    int data;
+    nod* next;
+    nod* prev;
+
+    nod(int data) {
+        this -> data = data;
+        this -> next = NULL;
+        this -> prev = NULL;
+    }
+};
+
+nod* head;
+nod* tail;
+
+bool isEmpty() {
+    return head == NULL;
+}
+
+void addToList() {
+    nod* temp;
+
+    if (isEmpty() && !pq.empty()) {
+        temp = new nod(pq.top());
+        pq.pop();
+        head = tail = temp;   
+    }
+    while (!pq.empty()) {
+        temp = new nod(pq.top());
+        pq.pop();
+        tail -> next = temp;      
+        temp -> prev = tail;     
+        tail = temp;            
+    }
+}
+
+void print_data(){
+    nod* temp = head;
+    while(temp != NULL){
+        cout << temp -> data << " ";
+        temp = temp -> next;
+    }
+    
+    cout << "\n";
+}
+
+
+int main() {
+    pq.push(5);
+    pq.push(4);
+    pq.push(3);
+    pq.push(2);
+    pq.push(7);
+    addToList();
+    print_data();
+
+    return 0;
+}

@@ -1,0 +1,16 @@
+struct nod{
+  int data;
+  nod* next;
+  nod* prev;
+  
+  
+  nod(int data){
+    this -> data = data;  
+    this -> next = NULL;
+    this -> prev = NULL;
+  }
+  
+};
+
+nod * head;
+nod * tail;

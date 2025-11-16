@@ -1,0 +1,12 @@
+struct nod{
+  int data;
+  nod* next;
+  
+  nod(int data){
+    this -> data = data;  
+    this -> next = NULL;
+  }
+  
+};
+
+nod* top;

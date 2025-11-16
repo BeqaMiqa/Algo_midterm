@@ -1,0 +1,18 @@
+
+// es calmxrivistvis yovel shemtxvevashi mara doublezec mushaobs
+
+void RevRecPrint(nod* temp = head){
+    if(temp == NULL)return;
+    RevRecPrint(temp->next);
+    cout << temp -> data << " ";
+}
+
+// es imena doublistvis
+
+// main
+
+void RevRecPrint(nod* temp = tail) {
+    if (temp == nullptr) return;       
+    cout << temp->data << " ";         
+    RevRecPrint(temp->prev);
+}

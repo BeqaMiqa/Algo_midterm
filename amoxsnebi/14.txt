@@ -1,0 +1,18 @@
+nod* head;
+nod* tail;
+
+bool isempty(){
+    return head == NULL;
+}
+
+void first_insert(int data){
+    if(isempty()){
+        head = new nod(data);
+        tail = head;
+    }
+    else {
+        nod* temp = new nod(data);
+        temp -> next = head;
+        head = temp;
+    }
+}

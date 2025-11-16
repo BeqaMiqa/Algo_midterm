@@ -1,0 +1,15 @@
+int findIter(int data){
+    int pos = 0;
+    nod* temp = head;
+    while(temp != NULL){
+        if(temp -> data == data)return pos;
+        pos++;
+        temp = temp -> next;
+    }
+    
+    return -1;
+}
+
+// main
+
+cout << findIter(1); // magalitad naxe 1

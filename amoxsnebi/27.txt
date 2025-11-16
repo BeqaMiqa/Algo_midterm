@@ -1,0 +1,64 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+stack<int> st;
+
+struct nod{
+  int data;
+  nod* next;
+  nod* prev;
+  
+  nod(int data){
+      this -> data = data;
+      this -> next = NULL;
+      this -> prev = NULL;
+  }
+  
+};
+
+nod* head;
+nod* tail;
+
+bool isEmpty(){
+    return head == NULL;
+}
+
+void addToList(){
+    nod* temp;
+    if(isEmpty() && !st.empty()){
+        temp = new nod(st.top());
+        st.pop();
+        head = tail = temp;
+    }
+    while(!st.empty()){
+        temp = new nod(st.top());
+        st.pop();
+        tail -> next = temp;
+        temp -> prev = tail;
+        tail = temp;
+    }
+}
+
+void print_data(){
+    nod* temp = head;
+    while(temp != NULL){
+        cout << temp -> data << " ";
+        temp = temp -> next;
+    }
+    
+    cout << "\n";
+}
+
+int main()
+{
+    st.push(5);
+    st.push(4);
+    st.push(3);
+    st.push(2);
+    st.push(1);
+    addToList();
+    print_data();
+
+    return 0;
+}
