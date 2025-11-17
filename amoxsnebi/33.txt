@@ -1,4 +1,6 @@
 void merge(){
-    tailA -> next = headB;
-    headB -> prev = tailA;
+    A.push_back(B.front());
+    B.pop_front();
+    A.push_back(B.front());
+    B.pop_front();
 }

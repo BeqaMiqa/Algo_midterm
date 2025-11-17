@@ -1,8 +1,23 @@
-void mergeWithhStack(){
-    push_frontB(stackB.top());
-    stackB.pop();
-    push_frontB(stackB.top());
-    stackB.pop();
-    tailA -> next = headB;
-    headB -> prev = tailA;
+list<int> A = {1, 2, 3};
+stack<int> B;
+
+list<int> C;
+
+void merge(){
+    while(!B.empty()){
+        C.push_front(B.top());
+        B.pop();
+    }
+    while(!A.empty()){
+        C.push_front(A.back());
+        A.pop_back();
+    }
+}
+
+int main()
+{
+    B.push(4);
+    B.push(5);
+
+    return 0;
 }
