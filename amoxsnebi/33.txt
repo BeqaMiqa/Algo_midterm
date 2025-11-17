@@ -1,0 +1,4 @@
+void merge(){
+    tailA -> next = headB;
+    headB -> prev = tailA;
+}

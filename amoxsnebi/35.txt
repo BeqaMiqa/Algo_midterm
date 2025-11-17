@@ -1,0 +1,8 @@
+void mergeWithhStack(){
+    push_frontB(stackB.top());
+    stackB.pop();
+    push_frontB(stackB.top());
+    stackB.pop();
+    tailA -> next = headB;
+    headB -> prev = tailA;
+}
