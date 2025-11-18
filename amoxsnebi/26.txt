@@ -5,3 +5,25 @@ void deleteThird(int data){
     nod* temp = head->next; 
     temp -> next = temp -> next -> next;
 }
+
+// general code by edvard (to delete not just the third one)
+
+// for double linked list
+
+void delete_in(int n) {  
+    node* temp = head;  
+    for (int i = 1; i < n; ++i)    
+        temp = temp->next;  
+        temp->prev->next = temp->next;  
+        temp->next->prev = temp->prev;
+}
+
+// for single list list
+
+void delete_in(int n) {  
+    node* temp = head;  
+    for (int i = 1; i < n; ++i)    
+        temp = temp->next;  
+        temp->prev->next = temp->next;  
+}
+
