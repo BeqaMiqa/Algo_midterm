@@ -7,3 +7,28 @@ void putThird(int data){
     it->next = temp->next;
     temp->next = it;
 }
+
+// general code for when we have to put data in specific position nut just 3rd
+// code by Edvard
+
+// for double linked list
+void insert_in(int n, int data) {  
+    node* temp = head;  
+    for (int i = 1; i < n - 1; ++i)    
+        temp = temp -> next;  
+        node* it = new node(data);  
+        it->next = temp->next;  
+        temp->next = it;  
+        it->next->prev = it;  
+        it->prev = temp;
+}
+
+// for single linked list
+void insert_in(int n, int data) {  
+    node* temp = head;  
+    for (int i = 1; i < n - 1; ++i)    
+        temp = temp -> next;  
+        node* it = new node(data);  
+        it->next = temp->next;  
+        temp->next = it;  
+}
